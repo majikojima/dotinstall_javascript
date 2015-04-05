@@ -7,13 +7,20 @@
     
     <body>
     	<script>
-    		alert("hello");
+    		//関数
 
-    		var answer = confirm("are you sure?");
-    		console.log(answer);
+    		function hello(){
+	    		console.log("hello");
+    		}
+    		hello();
 
-    		var name = prompt("お名前は？", "名無しさん");
-    		console.log(name);
+    		function hello(name){
+	    		console.log("hello " + name);
+	    		return "hello " + name;
+    		}
+
+    		var greet = hello("Bob");
+    		console.log(greet);
     	</script>
     </body>
 </html>
