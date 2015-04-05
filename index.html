@@ -7,16 +7,25 @@
     
     <body>
     	<script>
-    		//条件分岐
-    		var score = 80;
-    		if(score > 60){
-    			console.log("OK");
-    		}else if(score > 40){
-    			console.log("soso");
+    		//真偽値
+    			//文字列：　空文字以外だったらtrue
+    			//数値：　0かNaN以外だったらtrue
+    			//object：　null以外だったらtrue
+    			//undefined,　nullはfalse
+
+    		var x;
+    		if(x){
+    			console.log("x true");
+    		}else{
+    			console.log("x false");
     		}
-    		else{
-    			console.log("NG");
-    		}
+
+    		//三項演算子
+    		var max, x, y;
+    		x = 10;
+    		y = 20;
+    		max = (x > y) ? x : y;
+    		console.log(max);
     	</script>
     </body>
 </html>
