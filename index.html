@@ -7,21 +7,31 @@
     
     <body>
     	<script>
-    		//関数
+    		//タイマー
 
-    		// (function hello(name){	//即時関数
-    		// 	document.write("hello " + name);
-    		// })("Bob");
+    		var i = 0;
+    		// function show(){
+    		// 	document.write(i++);
+    		// }
 
-    		(function(name){	//即時関数
-    			document.write("hello " + name);
-    		})("Bob");
+    		// setInterval(function(){
+    		// 	show();
+    		// }, 1000);
 
-    		(function(){
-	    		var x = 10;
-	    		var y = 20;
-	    		document.write(x + y);
-	    	})();
+    		// setTimeout(function(){
+    		// 	show();
+    		// }, 1000);
+			function show(){
+				document.write(i++);
+				var tid = setTimeout(function(){
+					show();
+				}, 1000);
+
+				if(i > 3){
+					clearTimeout(tid);
+				}
+			}
+			show();
 
     	</script>
     </body>
