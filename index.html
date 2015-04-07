@@ -9,15 +9,19 @@
     		//オブジェクト
 
     		var user = {
-    			email: "kojima@example.com",
-    			score: 80
+    			email: "kojima@example.com",	//プロパティ
+    			score: 80,
+    			greet: function(name){
+    				console.log("hello " + name + " from " + this.email);
+    			}
     		};
-    		document.write(user["email"]);
-    		document.write(user.score + "<br>");
+    		// document.write(user["email"]);
+    		// document.write(user.score + "<br>");
 
-    		user.score = 100;
-    		document.write(user);
-    		console.log(user);
+    		// user.score = 100;
+    		// document.write(user);
+    		// console.log(user);
+    		user.greet("Tom");
 
     	</script>
     </body>
