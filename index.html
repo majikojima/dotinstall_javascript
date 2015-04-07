@@ -9,13 +9,20 @@
     	<script>
     		//関数
 
-    		var hello = function(name){	//無名関数、匿名関数
-    			var msg = "hello " + name;
-    			return msg;
-    		};
-    		var greet = hello("Tom");
-    		document.write(greet);
-    		
+    		// (function hello(name){	//即時関数
+    		// 	document.write("hello " + name);
+    		// })("Bob");
+
+    		(function(name){	//即時関数
+    			document.write("hello " + name);
+    		})("Bob");
+
+    		(function(){
+	    		var x = 10;
+	    		var y = 20;
+	    		document.write(x + y);
+	    	})();
+
     	</script>
     </body>
 </html>
