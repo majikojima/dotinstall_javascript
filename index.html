@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>javascript</title>
+    	<meta charset="utf-8">
+        <title>javascriptの</title>
+        <style>
+	        .myStyle{
+	        	font-weight: bold;
+	        	border: 1px solid gray;
+	        }
+        </style>
     </head>
     
     <body>
+    	<h1>見出し</h1>
+    	<p id="msg">こんにちは！</p>
     	<script>
-    		//
-    		console.dir(window);
-    		console.log(window.outerHeight);
-    		//window.location.href = 'http://dotinstall.com';
+	    	var e = document.getElementById('msg');
+	    	e.textContent = 'hello';
+	    	e.style.color = 'red';
+	    	e.className = 'myStyle';
 
-    		//window.document 今開いているページ
+	    	/*
+				body
+					p
+						text
+	    	*/
+	    	var greet = document.createElement('p');
+	    	var text = document.createTextNode('hello world');
+	    	document.body.appendChild(greet).appendChild(text);
 
-    		//document object model (DOM)
-    		
-
+	    	/*
+	    		body
+		    		h1
+		    			text
+	    	*/
+	    	var h1test = document.createElement('h1');
+	    	var h1text = document.createTextNode("hehehe");
+	    	document.body.appendChild(h1test).appendChild(h1text);
     	</script>
     </body>
 </html>
