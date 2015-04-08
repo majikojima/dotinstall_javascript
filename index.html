@@ -8,21 +8,16 @@
     	<script>
     		//組み込みオブジェクト
 
-    		var a = new Array(100,300,200);
-    		// var a = [100,200,300];
-    		console.log(a.length);
+    		console.log(Math.PI);
+    		console.log(Math.ceil(5.3));	//切り上げ
+    		console.log(Math.floor(5.3));	//切り捨て
+    		console.log(Math.round(5.3));	//四捨五入
+    		console.log(Math.random());
 
-    		// unshift -> array <- push
-    		// shift   <- array -> pop
-    		a.push(500);
-    		console.log(a);
-    		a.splice(1, 2);
-    		console.log(a);
-
-    		a = [100,200,300,500];
-    		a.splice(1, 2, 800, 1000);
-    		console.log(a);
-
+    		var d = new Date();
+    		console.log(d.getFullYear());
+    		console.log(d.getMonth());	//何故か月-1になる(4月だと3）
+    		console.log(d.getTime());	//1970/1/1〜
 
     	</script>
     </body>
